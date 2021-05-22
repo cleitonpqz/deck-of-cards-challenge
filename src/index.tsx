@@ -5,6 +5,14 @@ import App from './App'
 import { store } from './app/store'
 import * as serviceWorker from './serviceWorker'
 
+declare global {
+  interface Window {
+    env: {
+      REACT_APP_DECK_API_URL: string
+    }
+  }
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
